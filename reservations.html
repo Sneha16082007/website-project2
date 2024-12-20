@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Delights - Reservations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8ef;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #800000;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav img {
+            height: 50px;
+        }
+        nav a {
+            color: grey;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+            margin: 2rem;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffe4c4;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin: 1rem 0 0.3rem;
+            font-weight: bold;
+        }
+        form input, form select, form button {
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            font-size: 1rem;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #800000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #a11d1d;
+        }
+        footer {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="https://indiandelightms.com/static/media/Indian%20Delight%20Logo.cd155316dfdb7c38c024.png" alt="Indian Delights">
+        <div>
+            <a href="homepage.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservations.html">Reservation</a>
+            <a href="reviews.html">Review</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+    </nav>
+    <h1>Reserve Your Table</h1>
+    <form id="reservationForm">
+        <label for="name">Your Name</label>
+        <input id="name" type="text" placeholder="Your Name" required>
+        
+        <label for="email">Your Email</label>
+        <input id="email" type="email" placeholder="Your Email" required>
+        
+        <label for="date">Reservation Date</label>
+        <input id="date" type="date" required>
+        
+        <label for="time">Reservation Time</label>
+        <input id="time" type="time" required>
+        
+        <label for="people">Number of People</label>
+        <select id="people" required>
+            <option value="2">2 People</option>
+            <option value="4">4 People</option>
+            <option value="6">6 People</option>
+            <option value="8">8 People</option>
+        </select>
+        
+        <button type="submit">Book Now</button>
+    </form>
+    <footer>
+        © Indian Delights. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to show alert on form submission -->
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from actually submitting
+            // Show alert confirmation
+            alert("Your reservation has been successfully booked. Thank you for choosing Indian Delights !");
+            // Optional: Reset the form
+            document.getElementById('reservationForm').reset();
+        });
+    </script>
+</body>
+</html>
+
